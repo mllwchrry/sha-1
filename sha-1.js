@@ -1,4 +1,4 @@
-function sha1(message) {
+module.exports = function sha1(message) {
     return blocksToHex(sha1_rounds(pad(message)));
 }
 
@@ -29,6 +29,8 @@ function blocksToHex(blocks) {
 
         hex += block.toString(16);
     }
+    if (hex.length !== 40)
+        hex = hex.padStart(40, "0")
 
     return hex;
 }
@@ -104,5 +106,3 @@ function fFromT(t, b, c, d) {
 function kFromT(t) {
     return t <= 19 ? 0x5A827999 : t <= 39 ? 0x6ED9EBA1 : t <= 59 ? 0x8F1BBCDC : 0xCA62C1D6;
 }
-
-// console.log(sha1('test'))
