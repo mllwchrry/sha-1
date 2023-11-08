@@ -34,6 +34,7 @@ to perform simple hashes.
 
 Comparisons are in the time-comparison.js file:
 
+
 <img width="192" alt="Screenshot 2023-11-08 at 20 08 41" src="https://github.com/mllwchrry/sha-1/assets/72436706/65c4bf95-f6c9-4acd-ac38-c760015499a9">
 
 
